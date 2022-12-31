@@ -35,6 +35,7 @@ export const ChainInfo: React.FC = () => {
     sessionStorage.setItem("rpcEndPoint", formValues.rpcEndpoint);
     sessionStorage.setItem("contractAddress", formValues.contractAddress);
     setShowForm(true);
+    window.location.reload();
   };
 
   const networkInfo = {
@@ -47,7 +48,7 @@ export const ChainInfo: React.FC = () => {
       {showForm ? (
         <CheckBalance netInfo={networkInfo} />
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form className='ChainInfoForm' onSubmit={handleSubmit}>
           <label>
             RPC Endpoint:
             <input

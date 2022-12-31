@@ -41,7 +41,8 @@ export const CheckBalance = (props: ChainInfoProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+    <form className='checkBalanceForm' onSubmit={handleSubmit}>
       <label>
         Account Address:
         <input
@@ -57,5 +58,6 @@ export const CheckBalance = (props: ChainInfoProps) => {
       {error && <p>{error}</p>}
       {balance && <p>Your balance is {balance}</p>}
     </form>
+    </>
   );
 };
