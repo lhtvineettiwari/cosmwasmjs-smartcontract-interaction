@@ -18,6 +18,7 @@ function App() {
     {sessionStorage.getItem("rpcEndPoint") && sessionStorage.getItem("contractAddress") ? 
     <button id="logout-button" onClick={clearSession}>
       Log Out
+    <span className="info">This is some information that will be shown on hover</span>
     </button>: null}
     </div>
   );
